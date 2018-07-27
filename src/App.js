@@ -6,11 +6,16 @@ class App extends Component {
   render() {
     console.log(this.props.pokedata)
     return (
-        <div>
-          <Target/>
-        </div>
-        );
+    {this.props.pokedata.map(function(pokemon)){
+          return (
+              <div>
+                <Target/>
+              </div>
+              );
+            }
+          );
+        });
       }
-  }
+    }
 
 export default App;
